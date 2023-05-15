@@ -1,0 +1,72 @@
+FROM tensorflow/tensorflow:1.13.2-gpu-py3
+
+ARG USER=dummy
+ARG UID=1000
+ARG GID=1000
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+# Install dependencies of simulator
+RUN set -ex \
+  && apt-get update \
+  && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
+    sudo \
+    wget \
+    curl \
+    unzip \
+    locales \
+    language-pack-en \
+    build-essential \
+    ca-certificates \
+    cmake \
+    git \
+    vim \
+    ffmpeg \
+    protobuf-compiler \
+  && update-locale LANG=en_US.UTF-8 LC_MESSAGES=POSIX
+
+ENV TZ=US/Pacific
+
+# Install apt dependencies
+RUN apt-get update && apt-get install -y \
+    gpg-agent \
+    python3-cairocffi \
+    protobuf-compiler \
+    python3-opencv \
+    python3-pil \
+    python3-lxml \
+    python3-tk
+
+# Install gcloud and gsutil commands
+# https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
+RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
+    echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - && \
+    apt-get update -y && apt-get install google-cloud-sdk -y
+
+
+RUN useradd -m $USER \
+  && echo "$USER:$USER" | chpasswd \
+  && usermod --shell /bin/bash $USER \
+  && usermod -aG sudo $USER \
+  && echo "$USER ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/$USER \
+  && chmod 0440 /etc/sudoers.d/$USER \
+  && usermod  --uid $UID $USER \
+  && groupmod --gid $GID $USER
+
+# Change user
+USER $USER
+WORKDIR /home/$USER/
+
+ENV LANG="en_US.UTF-8"
+RUN echo "export LANG=\"en_US.UTF-8\"" >> /home/$USER/.bashrc
+RUN echo "export PATH=\"$HOME/.local/bin:$PATH\"" >> /home/$USER/.bashrc
+ENV TF_CPP_MIN_LOG_LEVEL 3
+
+RUN python -m pip install --user -U pip
+RUN pip install --user Cython contextlib2 jupyter jupyterlab matplotlib websockets environs pyyaml
+
+RUN pip install --user numpy pandas scipy pyquaternion liblas opencv-python tqdm pygame pyopencl==2019.1.2 \
+  filterpy simple-pid pillow pyproj==3.0.1 requests boto3 ipykernel py-trees tabulate
+
+CMD ["bash"]

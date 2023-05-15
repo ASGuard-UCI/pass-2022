@@ -1,0 +1,6 @@
+change the scenario mode first,
+scenario_configurations has ego info and transform
+
+--scenario=FollowROSVehicle_1 --agent=autonomous_agent
+SCENARIO_RUNNER_ROOT=./
+    -- Feb 7

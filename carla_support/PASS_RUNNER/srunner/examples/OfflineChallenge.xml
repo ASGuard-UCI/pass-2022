@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<scenarios>
+<!--    <scenario name="OfflineChallenge_1" type="MyScenario" town="Town01_Opt">-->
+<!--        <ego_vehicle x="338" y="306" z="1.5" yaw="0" model="vehicle.tesla.model3" />-->
+<!--        <weather cloudiness="0" precipitation="0" precipitation_deposits="0" wind_intensity="0" sun_azimuth_angle="0" sun_altitude_angle="75" />-->
+<!--    </scenario>-->
+    <scenario name="OfflineChallenge_1" type="MyScenario" town="Town03_Opt">
+        <ego_vehicle x="-2.975639820098877" y="-182.633056640625" yaw="91.41354370117188" z="0.0" model="vehicle.lincoln.mkz_2017" />
+        <other_actor x="6.012864112854004" y="-128.0565643310547" yaw="0" z="0.0" model="walker.pedestrian.0001" />
+        <weather cloudiness="0" precipitation="0" precipitation_deposits="0" wind_intensity="0" sun_azimuth_angle="0" sun_altitude_angle="75" />
+    </scenario>
+<!--    <scenario name="OfflineChallenge_1" type="MyScenario" town="MyMap03">-->
+<!--        <ego_vehicle x="0" y="2" z="0.5" yaw="90" model="vehicle.tesla.model3" />-->
+<!--        <weather cloudiness="0" precipitation="0" precipitation_deposits="0" wind_intensity="0" sun_azimuth_angle="0" sun_altitude_angle="75" />-->
+<!--    </scenario>-->
+<!--    <scenario name="OfflineChallenge_2" type="MyScenario" town="MyMap05">-->
+<!--&lt;!&ndash;        <ego_vehicle x="392.6680908203125" y="-138.93801879882812" z="2" yaw="0" model="vehicle.tesla.model4" />&ndash;&gt;-->
+<!--        <ego_vehicle x="460.27154541015625" y="-304.8040466308594" z="2" yaw="-58.11141586303711" model="vehicle.tesla.model4" />-->
+<!--        <weather cloudiness="70" precipitation="0" precipitation_deposits="0" wind_intensity="0" sun_azimuth_angle="0" sun_altitude_angle="75" />-->
+<!--    </scenario>-->
+</scenarios>

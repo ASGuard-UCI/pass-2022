@@ -1,0 +1,14 @@
+docker: achilles-shapeshifter 
+detector: FasterRCNNInception 
+2d_to_3d: HDMap
+tracker: Tracker2D
+fusion: False
+lat_controller: LateralController
+lon_controller: LongitudinalController
+detection_frequency: 20
+control_frequency: 100
+target_speed: 11.176
+avg_acceleration: 5.4
+safe_deceleration: -3.4
+max_deceleration: -4.0
+total_sim_duration: 6

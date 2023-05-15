@@ -1,0 +1,39 @@
+Now Pylot support tf 2.5.1, we try to implement it in carla 0.9.13 with the latest models
+
+# Suggest to use a new env
+conda create -n pass_runner python=3.7
+conda activate pass_runner
+
+# Install scenario_runner requirements
+(pass_runner) xx:{PATH_TO_PASS_RUNNER} pip install -r requirements.txt
+(pass_runner) xx:{PATH_TO_PASS_RUNNER/leaderboard} pip install -r requirements.txt
+
+# Install pylot
+## Install compatible pytorch first
+(e.g.,conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch)
+## Install pylot locally
+(pass_runner) xx:{PATH_TO_PYLOT} ./install_new.sh (mmcv-full mmdet for QDTrack installation)
+(pass_runner) xx:{PATH_TO_PYLOT} pip install -e ./ (setup.py has changed, ignore old torch)
+## Install cudnn
+(https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#download)
+
+#Use test.conf, tf 2 load model is different from tf1
+
+
+now pylot can run as routes
+fps low
+use simulator_obstacle_detection, simulator_traffic_light_detection, perfect_obstacle_tracking and perfect_localization can increase fps
+
+# for wheel controller
+Install Thrustmaster driver
+https://github.com/Kimplul/hid-tmff2
+Make sure the firmware is 34 on T300RS
+It seems that the wheel needs to be re-installed everytime the machine is restarted
+    For windows, to enable force-feedback, use control panel to set auto-center by wheel
+
+# import from roadrunner but has no collision:
+import as level into a new folder, the static mash may not have collision
+need to use import to content folder, e.g., import to carla/game/.../circuit_of_americas
+
+# add roadrail
+use spline mesh

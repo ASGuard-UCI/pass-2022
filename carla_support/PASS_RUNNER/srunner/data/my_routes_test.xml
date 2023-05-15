@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+<!--   <route id="0" town="Town01_Opt">-->
+<!--      <waypoint pitch="0.0" roll="0.0" x="338" y="300" yaw="180" z="0.0" />-->
+<!--&lt;!&ndash;      <waypoint pitch="0.0" roll="0.0" x="338" y="175" yaw="180" z="0.0" />&ndash;&gt;-->
+<!--      <waypoint pitch="0.0" roll="0.0" x="92.39674377441406" y="175.9327392578125" yaw="269.99127197265625" z="0.0" />-->
+<!--   </route>-->
+   <route id="0" town="Town03_Opt">
+<!--      a pedestrian before the crossing-->
+      <waypoint pitch="0.0" roll="0.0" x="-17.651142120361328" y="16.069765090942383" yaw="46.27953338623047" z="0.0" />
+      <waypoint pitch="0.0" roll="0.0" x="10.85339069366455" y="-175.53175354003906" yaw="-88.58645629882812" z="0.0" />
+      <waypoint pitch="0.0" roll="0.0" x="33.177642822265625" y="-193.16932678222656" yaw="1.4395599365234375" z="0.0" />
+   </route>
+    <route id="1" town="Town03_Opt">
+<!--        another circling vehicel-->
+<!--      <waypoint pitch="0.0" roll="0.0" x="-20.5" y="-2.9" yaw="46.27953338623047" z="0.0" />-->
+<!--      <waypoint pitch="0.0" roll="0.0" x="34" y="-130" yaw="-1.3" z="0.0" />-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="110" y="-128" yaw="3.6" z="0.0" />-->
+        <waypoint pitch="0.0" roll="0.0" x="30.8" y="-205" yaw="-177" z="0.0" />
+        <waypoint pitch="0.0" roll="0.0" x="156" y="-171" yaw="-81" z="0.0" />
+        <waypoint pitch="0.0" roll="0.0" x="110" y="-128" yaw="3.6" z="0.0" />
+   </route>
+    <route id="2" town="Town03_Opt">
+        <waypoint pitch="0.0" roll="0.0" x="-9.4" y="103.2" yaw="90" z="0.0" />
+        <waypoint pitch="0.0" roll="0.0" x="-40.5" y="128.2" yaw="-178" z="0.0" />
+   </route>
+<!--   <route id="0" town="MyMap03">-->
+<!--      <waypoint pitch="0.0" roll="0.0" x="30" y="2" yaw="180" z="0.0" />-->
+<!--      <waypoint pitch="0.0" roll="0.0" x="-20" y="2" yaw="180" z="0.0" />-->
+<!--      <waypoint pitch="0.0" roll="0.0" x="0" y="10" yaw="180" z="0.0" />-->
+<!--      <waypoint pitch="0.0" roll="0.0" x="0" y="15" yaw="180" z="0.0" />-->
+<!--   </route>-->
+<!--    <route id="0" town="MyMap05">-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="392.6680908203125" y="-138.93801879882812" yaw="-98.49876403808594" z="0.0"/>-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="332.24822998046875" y="-76.50711059570312" yaw="6.6230998039245605" z="0.0"/>-->
+<!--&lt;!&ndash;        this route is the inner circle&ndash;&gt;-->
+<!--   </route>-->
+<!--    <route id="0" town="MyMap05">-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="452.5053405761719" y="-348.928466796875" yaw="-126.89970397949219" z="0.0"/>-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="272.0889587402344" y="-172.24705505371094" yaw="55.384979248046875" z="0.0" />-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="262.12298583984375" y="-117.83709716796875" yaw="129.29608154296875" z="0.0" />-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="254.01463317871094" y="-25.039243698120117" yaw="52.5737419128418" z="0.0" />-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="356.41497802734375" y="-64.14969635009766" yaw="-37.51596450805664" z="0.0" />-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="416.5579528808594" y="-116.33354187011719" yaw="-72.55382537841797" z="0.0" />-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="337.86920166015625" y="-247.1083526611328" yaw="-96.59110260009766" z="0.0" />-->
+<!--        <waypoint pitch="0.0" roll="0.0" x="460.27154541015625" y="-304.8040466308594" yaw="-58.11141586303711" z="0.0" />-->
+<!--&lt;!&ndash;        this route is the outer circle&ndash;&gt;-->
+<!--   </route>-->
+</routes>
